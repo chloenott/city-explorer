@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import { Form, FormControl, InputGroup } from 'react-bootstrap';
+import { Form, FormControl, InputGroup, Button } from 'react-bootstrap';
 
 export class SearchForm extends React.Component {
   constructor(props) {

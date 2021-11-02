@@ -52,3 +52,5 @@ Name of feature: Feature 4: Errors
 - Start time: 11:30 pm
 - Finish time: 12:05 am
 - Actual time needed to complete: 35 minutes
+
+<img src="wrrc-1.PNG">
