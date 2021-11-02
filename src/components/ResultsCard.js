@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-export class ResultsCard extends React.Component {
+export default class ResultsCard extends React.Component {
   render() {
     return (
       <Card style={{ maxWidth: '18rem' }}>

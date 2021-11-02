@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
-export class Header extends React.Component {
+export default class Header extends React.Component {
   render() {
     return (
         <Navbar bg='light'>

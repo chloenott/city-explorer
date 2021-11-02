@@ -5,7 +5,7 @@ import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
 import ErrorMessage from './ErrorMessage';
 
-export class Main extends React.Component {
+export default class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = { mapData: null, errorObj: null };
