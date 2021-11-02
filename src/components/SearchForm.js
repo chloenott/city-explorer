@@ -1,11 +1,11 @@
 import React from 'react';
 import { Form, FormControl, InputGroup, Button } from 'react-bootstrap';
 
-export class SearchForm extends React.Component {
+export default class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formValue: null
+      formValue: ''
     };
   }
 

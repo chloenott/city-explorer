@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ResultsCard from './ResultsCard';
 
-export class SearchResults extends React.Component {
+export default class SearchResults extends React.Component {
   render() {
     return (
         <Container>
