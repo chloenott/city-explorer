@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { Container } from 'react-bootstrap';
-import { SearchForm } from './SearchForm';
-import { SearchResults } from './SearchResults';
+import SearchForm from './SearchForm';
+import SearchResults from './SearchResults';
 import ErrorMessage from './ErrorMessage';
 
 export class Main extends React.Component {

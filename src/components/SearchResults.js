@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { ResultsCard } from './ResultsCard';
+import ResultsCard from './ResultsCard';
 
 export class SearchResults extends React.Component {
   render() {
