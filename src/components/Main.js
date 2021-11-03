@@ -1,6 +1,4 @@
 import React from 'react';
-import axios from 'axios';
-import { Container } from 'react-bootstrap';
 import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
 import ErrorMessage from './ErrorMessage';
@@ -9,41 +7,29 @@ import Weather from './Weather';
 export default class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { mapData: null, weatherData: null, error: false };
+    this.state = { searchResults: null, userSelection: null, error: false };
   }
 
-  getMapData = async (userInput) => {
-    const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${userInput}&format=json`;
-    try {
-      let response = await axios.get(url);
-      this.setState({ mapData: response.data, weatherData: null, error: false })
-    } catch(e) {
-      this.setState({ mapData: null, userSelection: null, weatherData: null, error: e.toString() })
-    }
-  };
+  updateSearchResults = (searchResults) => {
+    this.setState({ searchResults: searchResults, error: false });
+  }
 
-  getWeatherData = async (userSelection) => {
-    const url = `${process.env.REACT_APP_SERVER_URL}/weather?searchQuery=${userSelection.display_name}&lat=${userSelection.lat}&lon=${userSelection.lon}`;
-    try {
-      let response = await axios.get(url);
-      this.setState({ userSelection: userSelection, weatherData: response.data, error: false })
-    } catch(e) {
-      let error = e.toString()
-      this.setState({ error: error })
-    }
+  updateUserSelection = (userSelection) => {
+    this.setState({ userSelection: userSelection, error: false });
+  }
+
+  errorHandler = (error) => {
+    this.setState({ error: error });
   }
 
   render() {
+    const {searchResults, userSelection, error} = this.state;
     return (
       <>
-        <Container id="main-container">
-          <div id="form-content">
-            <SearchForm getMapData={this.getMapData} />
-          </div>
-        </Container>
-        {this.state.error && <ErrorMessage error={this.state.error}></ErrorMessage>}
-        {this.state.weatherData && <Weather userSelection={this.state.userSelection} weatherData={this.state.weatherData}></Weather>}
-        {this.state.mapData && <SearchResults mapData={this.state.mapData} getWeatherData={this.getWeatherData}></SearchResults>}
+        <SearchForm updateSearchResults={this.updateSearchResults} errorHandler={this.errorHandler} />
+        <ErrorMessage error={error} />
+        <Weather userSelection={userSelection} errorHandler={this.errorHandler} />
+        <SearchResults searchResults={searchResults} updateUserSelection={this.updateUserSelection} errorHandler={this.errorHandler} />
       </>
     );
   }
