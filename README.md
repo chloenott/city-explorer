@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 
@@ -25,32 +25,59 @@ Code Fellows 301 course material for user stories and requirements for the app.
 
 ## Time Estimates
 
-Name of feature: Feature 1: Set up react repo and API keys
+Lab 06 Feature 1: Set up react repo and API keys
 
 - Estimate of time needed to complete: 15 minutes
 - Start time: 3:34 pm
 - Finish time: 5:37 pm
 - Actual time needed to complete: 2 hours 3 minutes
 
-Name of feature: Feature 2: Locations
+Lab 06 Feature 2: Locations
 
 - Estimate of time needed to complete: 15 minutes
 - Start time: 5:37 pm
 - Finish time: 8:34 pm
 - Actual time needed to complete: 2 hours 57 minutes
 
-Name of feature: Feature 3: Map
+Lab 06 Feature 3: Map
 
 - Estimate of time needed to complete: 1 hour
 - Start time: 8:34 pm
 - Finish time: 11:30 pm
 - Actual time needed to complete: 2 hours 56 minutes
 
-Name of feature: Feature 4: Errors
+Lab 06 Feature 4: Errors
 
 - Estimate of time needed to complete: 15 minutes
 - Start time: 11:30 pm
 - Finish time: 12:05 am
 - Actual time needed to complete: 35 minutes
 
+Lab 07 Feature 4: Set up server repo
+
+- Estimate of time needed to complete: 15 minutes
+- Start time: 6:20 pm
+- Finish time: 6:37 pm
+- Actual time needed to complete: 17 minutes minutes
+
+Lab 07 Feature 4: Weather (placeholder)
+
+- Estimate of time needed to complete: 1 hour
+- Start time: 6:38 pm
+- Finish time: 10:32 pm
+- Actual time needed to complete: 3 hours 36 minutes
+
+Lab 07 Feature 4: Errors (revisited)
+
+- Estimate of time needed to complete: 1 hour
+- Start time: 10:32 pm
+- Finish time: 11:48 pm
+- Actual time needed to complete: 1 hour 16 minutes
+
+Lab 06 WRRC:
+
 <img src="wrrc-1.PNG">
+
+Lab 07 WRRC:
+
+<img src="wrrc-2.jpeg">
