@@ -18,8 +18,7 @@ export default class Main extends React.Component {
       let response = await axios.get(url);
       this.setState({ mapData: response.data, weatherData: null, error: false })
     } catch(e) {
-      this.handleError(e)
-      //this.setState({ mapData: null, userSelection: null, weatherData: null, error: e.toString() })
+      this.setState({ mapData: null, userSelection: null, weatherData: null, error: e.toString() })
     }
   };
 
@@ -29,12 +28,9 @@ export default class Main extends React.Component {
       let response = await axios.get(url);
       this.setState({ userSelection: userSelection, weatherData: response.data, error: false })
     } catch(e) {
-      this.handleError(e)
+      let error = e.toString()
+      this.setState({ error: error })
     }
-  }
-
-  handleError = (e) => {
-    this.setState({ error: e.toString() })
   }
 
   render() {
