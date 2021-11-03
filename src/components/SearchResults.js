@@ -10,7 +10,7 @@ export default class SearchResults extends React.Component {
             <h2>Search Results</h2>
             <Row id="results-content-row">
               {this.props.mapData && this.props.mapData.map( (mapDataObj, i) => {
-                  return <ResultsCard key={i} data={this.props.mapData[i]}/>
+                  return <ResultsCard key={i} data={this.props.mapData[i]} getWeatherData={this.props.getWeatherData}/>
                 })}
             </Row>
           </div>
