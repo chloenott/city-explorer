@@ -16,8 +16,8 @@ export default class Weather extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {this.props.weatherData.map( forecast => {
-                  return (<tr>
+                {this.props.weatherData.map( (forecast, i) => {
+                  return (<tr key={i}>
                     <td>{forecast.date}</td>
                     <td>{forecast.description}</td>
                   </tr>)

@@ -9,16 +9,17 @@ import Weather from './Weather';
 export default class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { mapData: null, weatherData: null, error: '' };
+    this.state = { mapData: null, weatherData: null, error: false };
   }
 
   getMapData = async (userInput) => {
     const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${userInput}&format=json`;
     try {
       let response = await axios.get(url);
-      this.setState({ mapData: response.data, weatherData: null, error: '' })
+      this.setState({ mapData: response.data, weatherData: null, error: false })
     } catch(e) {
-      this.setState({ mapData: null, userSelection: null, weatherData: null, error: e.toString() })
+      this.handleError(e)
+      //this.setState({ mapData: null, userSelection: null, weatherData: null, error: e.toString() })
     }
   };
 
@@ -26,11 +27,14 @@ export default class Main extends React.Component {
     const url = `${process.env.REACT_APP_SERVER_URL}/weather?searchQuery=${userSelection.display_name}&lat=${userSelection.lat}&lon=${userSelection.lon}`;
     try {
       let response = await axios.get(url);
-      console.log(userSelection, response)
-      this.setState({ userSelection: userSelection, weatherData: response.data, error: '' })
+      this.setState({ userSelection: userSelection, weatherData: response.data, error: false })
     } catch(e) {
-      this.setState({ userSelection: null, weatherData: null, error: e.toString() })
+      this.handleError(e)
     }
+  }
+
+  handleError = (e) => {
+    this.setState({ error: e.toString() })
   }
 
   render() {

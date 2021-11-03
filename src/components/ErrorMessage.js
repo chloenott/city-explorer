@@ -7,8 +7,7 @@ export default class ErrorMessage extends React.Component {
         return(
             <Container>
                 <Alert variant="danger">
-                    <Alert.Heading>Error</Alert.Heading>
-                    <p>{this.props.error}</p>
+                    <Alert.Heading>{this.props.error}</Alert.Heading>
                 </Alert>
             </Container>
         )
