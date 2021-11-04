@@ -5,19 +5,21 @@
 
 ## Overview
 
-This is a class assignment for Code Fellows 301. This is a city guide app that enables a user to search for a city to map its location, to find out what movies are showing and to find out what the weather will be like.
+This is a class assignment for Code Fellows 301. This is a city guide app that enables a user to search for a city to map its location, to list what movies are related to that city, and to show the weather forecast.
 
 ## Getting Started
 
-The client side of this app runs in most modern browsers, and an internet connection will be needed for the API calls. The host for the website will need to be provided API keys. TODO: Server side to come later.
+The client side of this app runs in most modern browsers, and an internet connection will be needed for the API calls. The server side of this app needs to be installed onto server capable of running nodejs. Relevant API keys will need to be supplied to the server and client side hosts.
 
 ## Architecture
 
-Written in JavaScript using the React (for UI) and Axios (for API calls) libraries. LocationIQ is the API used for getting location data.
+Written in JavaScript using the React (for UI) and Axios (for API calls) libraries. LocationIQ is the API used for getting location data. Additional API calls are made to a custom nodejs/express server, which in turn makes API calls to get movie and weather data.
 
 ## Change Log
 
 1/1/21: First release that implements the location functionality.
+1/2/21: Added placeholder weather data.
+1/3/21: Added live weather and movie data.
 
 ## Credit and Collaborations
 
@@ -74,6 +76,27 @@ Lab 07 Feature 4: Errors (revisited)
 - Finish time: 11:48 pm
 - Actual time needed to complete: 1 hour 16 minutes
 
+Lab 08 Feature 1: Weather (live)
+
+- Estimate of time needed to complete: 1 hour
+- Start time: 5:17 pm
+- Finish time: 6:49 pm
+- Actual time needed to complete: 1 hour 32 minutes
+
+Lab 08 Feature 2: Movies
+
+- Estimate of time needed to complete: 1 hour
+- Start time: 6:53 pm
+- Finish time: 8:07 pm
+- Actual time needed to complete: 1 hour 14 minutes
+
+Lab 08 Feature 3: Publish
+
+- Estimate of time needed to complete: 30 minutes
+- Start time: 10:20 pm
+- Finish time: 10:35 pm
+- Actual time needed to complete:  15 minutes
+
 Lab 06 WRRC:
 
 <img src="wrrc-1.PNG">
@@ -81,3 +104,7 @@ Lab 06 WRRC:
 Lab 07 WRRC:
 
 <img src="wrrc-2.jpeg">
+
+Lab 08 WRRC:
+
+<img src="wrrc-3.jpeg">
