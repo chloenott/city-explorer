@@ -35,7 +35,7 @@ export default class Movies extends React.Component {
       moviesData && userSelection && (
         <Container>
           <div id="results-content">
-            <h2>Movies</h2>
+            <h2>Relevant Movies</h2>
             <h5 id="weather-location">{userSelection.display_name}</h5>
             <Table>
               <thead>

@@ -13,7 +13,7 @@ export default class SearchResults extends React.Component {
                 <Row id="results-content-row">
                 {searchResults.map( (searchResult, i) => {
                     return <ResultsCard key={i} data={searchResult} updateUserSelection={updateUserSelection} errorHandler={errorHandler}/>
-                    })}
+                })}
                 </Row>
             </div>
             </Container>

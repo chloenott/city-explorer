@@ -4,6 +4,7 @@ import SearchResults from './SearchResults';
 import ErrorMessage from './ErrorMessage';
 import Weather from './Weather';
 import Movies from './Movies';
+import { Accordion, Container } from 'react-bootstrap';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -30,13 +31,13 @@ export default class Main extends React.Component {
   render() {
     const {searchResults, userSelection, error} = this.state;
     return (
-      <>
+      <Container>
         <SearchForm updateSearchResults={this.updateSearchResults} errorHandler={this.errorHandler} />
         <ErrorMessage error={error} clearError={this.clearError} />
-        <SearchResults searchResults={searchResults} updateUserSelection={this.updateUserSelection} errorHandler={this.errorHandler} />
         <Weather userSelection={userSelection} errorHandler={this.errorHandler} />
         <Movies userSelection={userSelection} errorHandler={this.errorHandler} />
-      </>
+        <SearchResults searchResults={searchResults} updateUserSelection={this.updateUserSelection} errorHandler={this.errorHandler} />
+      </Container>
     );
   }
 }
