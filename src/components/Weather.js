@@ -11,8 +11,8 @@ export default class Weather extends React.Component {
   }
 
   componentDidUpdate = ({userSelection}) => {
-    if (this.props.userSelection !== userSelection) {
-      userSelection && this.getWeatherData(this.props.userSelection)
+    if (this.props.userSelection && this.props.userSelection !== userSelection) {
+      this.getWeatherData(this.props.userSelection)
     }
   }
 
