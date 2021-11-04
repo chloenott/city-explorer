@@ -11,7 +11,6 @@ export default class Header extends React.Component {
                     <Nav.Link>Home</Nav.Link>
                     <Nav.Link>Lorem</Nav.Link>
                     <Nav.Link>Ipsum</Nav.Link>
-                    <Nav.Link>Dolor</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
