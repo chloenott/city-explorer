@@ -3,6 +3,7 @@ import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
 import ErrorMessage from './ErrorMessage';
 import Weather from './Weather';
+import Movies from './Movies';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class Main extends React.Component {
   }
 
   errorHandler = (error) => {
-    this.setState({ error: error });
+    this.setState({ userSelection: null, error: error });
   }
 
   render() {
@@ -29,6 +30,7 @@ export default class Main extends React.Component {
         <SearchForm updateSearchResults={this.updateSearchResults} errorHandler={this.errorHandler} />
         <ErrorMessage error={error} />
         <Weather userSelection={userSelection} errorHandler={this.errorHandler} />
+        <Movies userSelection={userSelection} errorHandler={this.errorHandler} />
         <SearchResults searchResults={searchResults} updateUserSelection={this.updateUserSelection} errorHandler={this.errorHandler} />
       </>
     );
