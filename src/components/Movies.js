@@ -2,25 +2,26 @@ import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import axios from 'axios';
 
-export default class Weather extends React.Component {
+export default class Movies extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      weatherData: null
+      moviesData: null
     };
   }
 
   componentDidUpdate = ({userSelection}) => {
     if (this.props.userSelection && this.props.userSelection !== userSelection) {
-      this.getWeatherData(this.props.userSelection)
+      this.getMoviesData(this.props.userSelection)
     }
   }
 
-  getWeatherData = async ({display_name, lat, lon}) => {
-    const url = `${process.env.REACT_APP_SERVER_URL}/weather?searchQuery=${display_name}&lat=${lat}&lon=${lon}`;
+  getMoviesData = async ({display_name}) => {
+    const city = display_name.split(',')[0];
+    const url = `${process.env.REACT_APP_SERVER_URL}/movies?city=${city}`;
     try {
       let response = await axios.get(url);
-      this.setState({ weatherData: response.data });
+      this.setState({ moviesData: response.data });
     } catch(error) {
       this.setState({ weatherData: null });
       this.props.errorHandler(error.toString());
@@ -28,28 +29,22 @@ export default class Weather extends React.Component {
   }
 
   render() {
-    const { weatherData } = this.state
+    const { moviesData } = this.state
     const { userSelection } = this.props
     return (
-      weatherData && userSelection && (
+      moviesData && userSelection && (
         <Container>
           <div id="results-content">
-            <h2>Weather Forecast</h2>
+            <h2>Relevant Movies</h2>
             <h5 id="weather-location">{userSelection.display_name}</h5>
             <Table>
               <thead>
                 <tr>
-                  <td>Date</td>
-                  <td>Description</td>
+                    {Object.keys(moviesData[0]).map( (td, i) => <td key={i}>{td}</td> )}
                 </tr>
               </thead>
               <tbody>
-                {weatherData.map( (forecast, i) => {
-                  return (<tr key={i}>
-                    <td>{forecast.date}</td>
-                    <td>{forecast.description}</td>
-                  </tr>)
-                })}
+                {moviesData.map( (movie, i) => <tr key={i}>{Object.values(movie).map( (td, i) => <td key={i}>{td}</td> )}</tr> )}
               </tbody>
             </Table>
           </div>
