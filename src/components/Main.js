@@ -4,7 +4,7 @@ import SearchResults from './SearchResults';
 import ErrorMessage from './ErrorMessage';
 import Weather from './Weather';
 import Movies from './Movies';
-import { Accordion, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 export default class Main extends React.Component {
   constructor(props) {
