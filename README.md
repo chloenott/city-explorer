@@ -98,6 +98,20 @@ Lab 08 Feature 3: Publish
 - Finish time: 10:35 pm
 - Actual time needed to complete:  15 minutes
 
+Lab 09 Feature 1: Modularize
+
+- Estimate of time needed to complete: 15 minutes
+- Start time: 8:29 pm
+- Finish time: 9:03 pm
+- Actual time needed to complete:  34 minutes
+
+Lab 09 Feature 2: Componentize
+
+- Estimate of time needed to complete: 30 minutes
+- Start time: 7:45 pm
+- Finish time: 8:29 pm
+- Actual time needed to complete:  44 minutes
+
 Lab 06 WRRC:
 
 <img src="wrrc-1.PNG">
