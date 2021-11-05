@@ -13,7 +13,7 @@ export default class Main extends React.Component {
   }
 
   updateSearchResults = (searchResults) => {
-    this.setState({ searchResults: searchResults, error: false });
+    this.setState({ searchResults: searchResults, userSelection: null, error: false });
   }
 
   updateUserSelection = (userSelection) => {

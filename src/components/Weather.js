@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import axios from 'axios';
+import WeatherDay from './WeatherDay.js';
 
 export default class Weather extends React.Component {
   constructor(props) {
@@ -44,12 +45,7 @@ export default class Weather extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {weatherData.map( (forecast, i) => {
-                  return (<tr key={i}>
-                    <td>{forecast.date}</td>
-                    <td>{forecast.description}</td>
-                  </tr>)
-                })}
+                {weatherData.map( (forecast, i) => <WeatherDay key={i} date={forecast.date} description={forecast.description}/> )}
               </tbody>
             </Table>
           </div>
