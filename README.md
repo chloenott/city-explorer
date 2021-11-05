@@ -1,7 +1,7 @@
-# Project Name
+# City Explorer
 
-**Author**: Your Name Goes Here
-**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Author**: Chloe Nott
+**Version**: 1.2.0
 
 ## Overview
 
@@ -17,13 +17,14 @@ Written in JavaScript using the React (for UI) and Axios (for API calls) librari
 
 ## Change Log
 
-1/1/21: First release that implements the location functionality.
-1/2/21: Added placeholder weather data.
-1/3/21: Added live weather and movie data.
+11/1/21: First release that implements the location functionality.
+11/2/21: Added placeholder weather data.
+11/3/21: Added live weather and movie data.
+11/4/21: Code cleanup.
 
 ## Credit and Collaborations
 
-Code Fellows 301 course material for user stories and requirements for the app.
+Code Fellows 301 course material for user stories and requirements for the app. Joey Hernandez, Andrew Kim, and Kevin Stone helped me with WRRC's.
 
 ## Time Estimates
 
@@ -108,3 +109,7 @@ Lab 07 WRRC:
 Lab 08 WRRC:
 
 <img src="wrrc-3.jpeg">
+
+Lab 09 WRRC (Joey made this):
+
+<img src="wrrc-4.png">

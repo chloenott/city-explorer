@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import axios from 'axios';
+import Movie from './Movie.js';
 
 export default class Movies extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ export default class Movies extends React.Component {
         <Container>
           <div id="results-content">
             <h2>Relevant Movies</h2>
-            <h5 id="weather-location">{userSelection.display_name}</h5>
+            <h5 id="movie-location">{userSelection.display_name}</h5>
             <Table>
               <thead>
                 <tr>
@@ -44,7 +45,7 @@ export default class Movies extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {moviesData.map( (movie, i) => <tr key={i}>{Object.values(movie).map( (td, i) => <td key={i}>{td}</td> )}</tr> )}
+                {moviesData.map( (movie, i) => <Movie key={i} movie={movie}/> )}
               </tbody>
             </Table>
           </div>
