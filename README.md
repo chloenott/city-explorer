@@ -112,6 +112,13 @@ Lab 09 Feature 2: Componentize
 - Finish time: 8:29 pm
 - Actual time needed to complete:  44 minutes
 
+Lab 10 Feature 1: Caching
+
+- Estimate of time needed to complete: 1 hour
+- Start time: 10:14 pm
+- Finish time: 1:12 am
+- Actual time needed to complete:  2 hours 58 minutes
+
 Lab 06 WRRC:
 
 <img src="wrrc-1.PNG">
